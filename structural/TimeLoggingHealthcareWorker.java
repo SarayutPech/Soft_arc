@@ -8,7 +8,7 @@ public class TimeLoggingHealthcareWorker extends HealthcareWorkerDecorator{
         System.out.printf("Decorate "+name.getName() + " with TimeLogging.\n");
     }
     public void service(){
-        // DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E, MMM dd yyyy, hh:mm:ss a"); ภาษาเพี้ยนน่าจะเพราะเครื่องผมตั้ง default data ไว้เป็นภาษาไทย
+        // DateTimeFormatter formatter = DateTimeFormatter.ofPattern("E, MMM dd yyyy, hh:mm:ss a"); ภาษาเพี้ยนน่าจะเพราะเครื่องผมตั้ง default date ไว้เป็นภาษาไทย
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM HH:mm:ss  yyyy");
         LocalDateTime now = LocalDateTime.now();
         System.out.printf(formatter.format(now) + " : ");
